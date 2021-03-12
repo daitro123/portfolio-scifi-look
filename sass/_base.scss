@@ -1,0 +1,35 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Roboto Mono", monospace;
+	min-height: 100vh;
+	background-color: $clr-background;
+	overflow: hidden;
+}
+
+.nav {
+	padding: 10rem;
+	font-size: 2rem;
+	font-weight: 300;
+	color: $clr-grey-light;
+	width: 80%;
+	margin: 0 auto;
+
+	&__list {
+		list-style: none;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__item:nth-child(1) {
+		margin-right: 10rem;
+	}
+}

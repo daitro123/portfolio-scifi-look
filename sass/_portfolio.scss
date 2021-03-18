@@ -7,6 +7,14 @@
 		font-size: 15rem;
 		color: rgba($clr-grey-light, 0.1);
 		margin-bottom: 10rem;
+
+		@media screen and (max-width: $medium) {
+			font-size: 12rem;
+		}
+
+		@media screen and (max-width: $small) {
+			font-size: 8rem;
+		}
 	}
 
 	&__grid {
@@ -16,6 +24,14 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: repeat(4, 30rem);
 		row-gap: 6rem;
+
+		@media screen and (max-width: $medium) {
+			width: 90%;
+		}
+
+		@media screen and (max-width: $small) {
+			row-gap: 20rem;
+		}
 	}
 
 	&__card {
@@ -29,11 +45,25 @@
 		border: 1px solid rgba(255, 255, 255, 0.18);
 		position: relative;
 		z-index: 1;
+		min-width: 450px;
+
+		@media screen and (max-width: $medium) {
+			min-width: 420px;
+		}
+
+		@media screen and (max-width: $small) {
+			min-width: 325px;
+			padding: 1.5rem;
+		}
 
 		& .card__text {
 			position: absolute;
 			top: 0;
 			padding: inherit;
+
+			@media screen and (max-width: $small) {
+				position: static;
+			}
 
 			& h3 {
 				font-size: 2rem;
@@ -51,17 +81,44 @@
 			}
 		}
 
+		& img {
+			position: absolute;
+			height: 18rem;
+			border-radius: 15px;
+			box-shadow: 14px 14px 10px rgba($color: #000000, $alpha: 0.3);
+
+			@media screen and (max-width: $medium) {
+				height: 16rem;
+			}
+
+			@media screen and (max-width: $small) {
+				height: 16rem;
+				bottom: -13rem;
+				left: 50% !important;
+				transform: translate(-50%, 0) !important;
+			}
+		}
+
 		&--1 {
 			grid-column: 1 / 2;
 			grid-row: 1 / 2;
 			position: relative;
 
+			@media screen and (max-width: $large) {
+				grid-column: 1 / 3;
+				justify-self: start;
+			}
+
+			@media screen and (max-width: $medium) {
+				justify-self: center;
+			}
+
 			& img {
-				position: absolute;
 				left: -10rem;
-				height: 18rem;
-				border-radius: 15px;
-				box-shadow: 14px 14px 10px rgba($color: #000000, $alpha: 0.3);
+
+				@media screen and (max-width: $medium) {
+					left: -7rem;
+				}
 			}
 
 			& .card__text {
@@ -73,12 +130,21 @@
 			grid-column: 2 / 3;
 			grid-row: 2 / 3;
 
+			@media screen and (max-width: $large) {
+				grid-column: 1 / 3;
+				justify-self: end;
+			}
+
+			@media screen and (max-width: $medium) {
+				justify-self: center;
+			}
+
 			& img {
-				position: absolute;
 				right: -10rem;
-				height: 18rem;
-				border-radius: 15px;
-				box-shadow: 14px 14px 10px rgba($color: #000000, $alpha: 0.3);
+
+				@media screen and (max-width: $medium) {
+					right: -7rem;
+				}
 			}
 
 			& .card__text {
@@ -90,12 +156,21 @@
 			grid-column: 1 / 2;
 			grid-row: 3 / 4;
 
+			@media screen and (max-width: $large) {
+				grid-column: 1 / 3;
+				justify-self: start;
+			}
+
+			@media screen and (max-width: $medium) {
+				justify-self: center;
+			}
+
 			& img {
-				position: absolute;
 				left: -10rem;
-				height: 18rem;
-				border-radius: 15px;
-				box-shadow: 14px 14px 10px rgba($color: #000000, $alpha: 0.3);
+
+				@media screen and (max-width: $medium) {
+					left: -7rem;
+				}
 			}
 
 			& .card__text {
@@ -107,12 +182,21 @@
 			grid-column: 2 / 3;
 			grid-row: 4 / 5;
 
+			@media screen and (max-width: $large) {
+				grid-column: 1 / 3;
+				justify-self: end;
+			}
+
+			@media screen and (max-width: $medium) {
+				justify-self: center;
+			}
+
 			& img {
-				position: absolute;
 				right: -10rem;
-				height: 18rem;
-				border-radius: 15px;
-				box-shadow: 14px 14px 10px rgba($color: #000000, $alpha: 0.3);
+
+				@media screen and (max-width: $medium) {
+					right: -7rem;
+				}
 			}
 
 			& .card__text {
@@ -128,43 +212,40 @@
 		align-self: flex-start;
 		justify-self: end;
 		transform: translate(40%, -40%);
+
+		@media screen and (max-width: $medium) {
+			height: 12rem;
+			width: 12rem;
+		}
 	}
 
 	& #first-circle {
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;
+
+		@media screen and (max-width: $large) {
+			justify-self: start;
+			transform: translate(-40%, -40%);
+		}
 	}
 
 	& #second-circle {
 		grid-column: 2 / 3;
 		grid-row: 4 / 5;
-		// height: 20rem;
-		// width: 20rem;
-		// z-index: -1;
-		// align-self: flex-start;
-		// justify-self: end;
-		// transform: translate(40%, -40%) rotate(45deg);
 	}
 
 	& #triangle {
 		grid-column: 1 / 2;
 		grid-row: 3 / 4;
-		// height: 20rem;
-		// width: 20rem;
-		// z-index: -1;
-		// align-self: flex-end;
-		// justify-self: end;
-		// transform: translate(40%, 40%);
+
+		@media screen and (max-width: $large) {
+			justify-self: start;
+			transform: translate(-40%, -40%);
+		}
 	}
 
 	& #square {
 		grid-column: 2 / 3;
 		grid-row: 2 / 3;
-		// height: 20rem;
-		// width: 20rem;
-		// z-index: -1;
-		// align-self: flex-end;
-		// justify-self: start;
-		// transform: translate(-40%, 40%);
 	}
 }

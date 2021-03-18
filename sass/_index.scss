@@ -6,6 +6,22 @@
 	z-index: -1;
 	opacity: 0;
 
+	@media screen and (max-width: $large) {
+		width: 40vw;
+		height: 40vw;
+	}
+
+	@media screen and (max-width: $medium) {
+		width: 45vw;
+		height: 45vw;
+	}
+
+	@media screen and (max-width: $small) {
+		width: 65vw;
+		height: 65vw;
+		opacity: 1;
+	}
+
 	&--blue {
 		background: linear-gradient(to bottom, rgba($clr-blue, 0.8), rgba(#110f0d, 1));
 	}
@@ -19,12 +35,20 @@
 main {
 	max-width: 120rem;
 	margin: 0 auto;
+
+	@media screen and (max-width: $large) {
+		max-width: 90%;
+	}
 }
 
 .hero {
 	display: flex;
 	justify-content: center;
-	min-height: 100vh;
+	min-height: 75vh;
+
+	@media screen and (max-width: $small) {
+		margin-top: 12rem;
+	}
 
 	& header {
 		position: absolute;
@@ -32,7 +56,21 @@ main {
 		margin-top: 10vh;
 		margin-left: 12vw;
 		color: $clr-grey-light;
-		min-height: 75vh;
+
+		@media screen and (max-width: $large) {
+			margin-left: 5vw;
+		}
+
+		@media screen and (max-width: $medium) {
+			margin-left: 0vw;
+		}
+
+		@media screen and (max-width: $small) {
+			position: static;
+			text-align: center;
+			width: max-content;
+			margin: 0 auto;
+		}
 
 		& h1 {
 			font-size: 2.5rem;

@@ -6,6 +6,14 @@
 		font-size: 15rem;
 		color: rgba($clr-grey-light, 0.1);
 		margin-bottom: 10rem;
+
+		@media screen and (max-width: $medium) {
+			font-size: 12rem;
+		}
+
+		@media screen and (max-width: $small) {
+			font-size: 8rem;
+		}
 	}
 
 	&__card {
@@ -23,9 +31,9 @@
 	}
 
 	&__icons {
-		height: 1.5rem;
 		color: $clr-grey-light;
 		font-size: 4rem;
+		margin-bottom: 6rem;
 
 		& i {
 			transition: all 0.2s linear;
@@ -55,7 +63,7 @@
 
 		&--blueish {
 			position: absolute;
-			top: 15%;
+			top: 50%;
 			left: 5vw;
 			height: 5rem;
 			width: 5rem;

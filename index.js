@@ -14,7 +14,6 @@ const animations = () => {
 				"-=0.6"
 			);
 	} else {
-		console.log("else");
 		const initialTimeline = gsap.timeline({ ease: "power4.out" });
 		initialTimeline
 			.to(".circle--blue", { opacity: 1, x: 0, duration: 1.5 })
@@ -23,6 +22,8 @@ const animations = () => {
 			.from(".hero__subheading div", { opacity: 0, y: 10, duration: 0.5 }, "-=0.3");
 	}
 };
+
+animations();
 
 // clear inline styles on resize and set values to finished state (hero section circles)
 window.addEventListener("resize", () => {
@@ -36,8 +37,6 @@ window.addEventListener("resize", () => {
 		gsap.set(".circle--pinkish", { xPercent: 30, opacity: 1 });
 	}
 });
-
-animations();
 
 ScrollTrigger.matchMedia({
 	"(min-width: 600px)": function () {

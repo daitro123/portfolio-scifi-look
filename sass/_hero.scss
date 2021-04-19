@@ -71,15 +71,16 @@ main {
 			width: max-content;
 			margin: 0 auto;
 		}
+	}
 
-		& h1 {
-			font-size: 2.5rem;
-			font-weight: 400;
-			letter-spacing: 0.6rem;
-			text-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.5);
-			margin-bottom: 1rem;
-			position: relative;
-		}
+	&__heading {
+		visibility: hidden;
+		font-size: 2.5rem;
+		font-weight: 400;
+		letter-spacing: 0.6rem;
+		text-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.5);
+		margin-bottom: 1rem;
+		position: relative;
 	}
 
 	&__subheading {
@@ -89,6 +90,7 @@ main {
 		text-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.5);
 
 		& div {
+			visibility: hidden;
 			margin-right: 1.5rem;
 		}
 	}

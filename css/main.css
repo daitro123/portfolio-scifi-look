@@ -145,7 +145,22 @@ div::selection {
   transition: all 0.3s linear;
 }
 
-.side-dot-nav__item:hover .side-dot-nav__item--dot::before,
+@media (hover: hover) {
+  .side-dot-nav__item:hover .side-dot-nav__item--dot::before {
+    height: 400%;
+    width: 400%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .side-dot-nav__item:hover .side-dot-nav__item--label {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 .side-dot-nav__item--active .side-dot-nav__item--dot::before {
   height: 400%;
   width: 400%;
@@ -155,7 +170,6 @@ div::selection {
           transform: translate(-50%, -50%);
 }
 
-.side-dot-nav__item:hover .side-dot-nav__item--label,
 .side-dot-nav__item--active .side-dot-nav__item--label {
   opacity: 1;
   -webkit-transform: translateX(0px);
@@ -271,7 +285,8 @@ main {
   }
 }
 
-.hero header h1 {
+.hero__heading {
+  visibility: hidden;
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.6rem;
@@ -290,6 +305,7 @@ main {
 }
 
 .hero__subheading div {
+  visibility: hidden;
   margin-right: 1.5rem;
 }
 

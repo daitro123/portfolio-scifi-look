@@ -6,10 +6,16 @@ const animations = () => {
 		initialTimeline
 			.to(".circle--blue", { autoAlpha: 1, xPercent: -30, duration: 2.5 })
 			.to(".circle--pinkish", { autoAlpha: 1, xPercent: 30, duration: 2 }, "-=2")
-			.from(".hero__heading", { autoAlpha: 0, x: -20, duration: 1 }, "-=1")
-			.from(
+			.fromTo(
+				".hero__heading",
+				{ autoAlpha: 0, x: -20, duration: 1 },
+				{ x: 0, autoAlpha: 1 },
+				"-=1"
+			)
+			.fromTo(
 				".hero__subheading div",
-				{ autoAlpha: 0, x: 15, duration: 1, ease: "Power1.out", stagger: 0.1 },
+				{ autoAlpha: 0, x: 15, duration: 1, ease: "Power1.out" },
+				{ autoAlpha: 1, x: 0, stagger: 0.1 },
 				"-=0.6"
 			);
 	} else {
@@ -71,6 +77,7 @@ const sideNavDotContact = document.querySelector(".side-dot-nav__item--contact")
 
 gsap.from(".side-dot-nav", {
 	xPercent: -100,
+	autoAlpha: 0,
 	scrollTrigger: {
 		trigger: ".portfolio",
 		start: "top center", // the default values

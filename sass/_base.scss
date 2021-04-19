@@ -114,7 +114,21 @@ div {
 				transition: all 0.3s linear;
 			}
 		}
-		&:hover &--dot::before,
+
+		@media (hover: hover) {
+			&:hover &--dot::before {
+				height: 400%;
+				width: 400%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&:hover &--label {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+
 		&--active &--dot::before {
 			height: 400%;
 			width: 400%;
@@ -123,7 +137,6 @@ div {
 			transform: translate(-50%, -50%);
 		}
 
-		&:hover &--label,
 		&--active &--label {
 			opacity: 1;
 			transform: translateX(0px);

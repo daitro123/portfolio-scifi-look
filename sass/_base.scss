@@ -80,7 +80,7 @@ div {
 	left: 0;
 	transform: translateY(-50%);
 	color: $clr-grey-light;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	padding-left: 2rem;
 	z-index: 10;
 
@@ -114,7 +114,8 @@ div {
 				transition: all 0.3s linear;
 			}
 		}
-		&:hover &--dot::before {
+		&:hover &--dot::before,
+		&--active &--dot::before {
 			height: 400%;
 			width: 400%;
 			top: 50%;
@@ -122,7 +123,8 @@ div {
 			transform: translate(-50%, -50%);
 		}
 
-		&:hover &--label {
+		&:hover &--label,
+		&--active &--label {
 			opacity: 1;
 			transform: translateX(0px);
 		}

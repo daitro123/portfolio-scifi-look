@@ -102,7 +102,7 @@ div::selection {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   color: #e5e5e5;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-left: 2rem;
   z-index: 10;
 }
@@ -145,7 +145,8 @@ div::selection {
   transition: all 0.3s linear;
 }
 
-.side-dot-nav__item:hover .side-dot-nav__item--dot::before {
+.side-dot-nav__item:hover .side-dot-nav__item--dot::before,
+.side-dot-nav__item--active .side-dot-nav__item--dot::before {
   height: 400%;
   width: 400%;
   top: 50%;
@@ -154,7 +155,8 @@ div::selection {
           transform: translate(-50%, -50%);
 }
 
-.side-dot-nav__item:hover .side-dot-nav__item--label {
+.side-dot-nav__item:hover .side-dot-nav__item--label,
+.side-dot-nav__item--active .side-dot-nav__item--label {
   opacity: 1;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
@@ -174,7 +176,7 @@ div::selection {
   height: 32vw;
   border-radius: 50%;
   z-index: -1;
-  opacity: 0;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 1250px) {
@@ -353,6 +355,7 @@ main {
 
 .contact .circle {
   opacity: 1;
+  visibility: visible;
 }
 
 .contact .circle--greenish {
@@ -369,7 +372,7 @@ main {
 
 .contact .circle--blueish {
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 5vw;
   height: 5rem;
   width: 5rem;
@@ -682,8 +685,8 @@ main {
 
 @media screen and (max-width: 900px) {
   .portfolio__svg {
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;
   }
 }
 

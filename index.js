@@ -75,9 +75,9 @@ ScrollTrigger.matchMedia({
 const sideNavDotPortfolio = document.querySelector(".side-dot-nav__item--portfolio");
 const sideNavDotContact = document.querySelector(".side-dot-nav__item--contact");
 
-gsap.from(".side-dot-nav", {
-	xPercent: -100,
-	autoAlpha: 0,
+gsap.to(".side-dot-nav", {
+	xPercent: 100,
+	autoAlpha: 1,
 	scrollTrigger: {
 		trigger: ".portfolio",
 		start: "top center", // the default values

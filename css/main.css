@@ -99,12 +99,13 @@ div::selection {
   position: fixed;
   top: 50%;
   left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
   color: #e5e5e5;
   font-size: 1.5rem;
   padding-left: 2rem;
   z-index: 10;
+  visibility: hidden;
 }
 
 .side-dot-nav__item {

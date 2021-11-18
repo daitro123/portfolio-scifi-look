@@ -3,7 +3,8 @@
 	position: relative;
 
 	&__header {
-		font-size: 15rem;
+		max-width: 120rem;
+		margin: 0 auto;
 		color: rgba($clr-grey-light, 0.1);
 		margin-bottom: 10rem;
 

@@ -1,0 +1,51 @@
+.hero {
+	display: flex;
+	justify-content: center;
+	min-height: 75vh;
+	max-width: 120rem;
+	margin: 0 auto;
+
+	@media screen and (max-width: $small) {
+		margin-top: 12rem;
+	}
+
+	&__text {
+		font-size: 7.4rem;
+		font-weight: 600;
+
+		& p {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__link {
+		font-size: 1.8rem;
+		color: $clr-beige;
+		position: relative;
+		display: inline-block;
+
+		&:hover a {
+			transform: translateX(2.6rem);
+		}
+
+		&:hover::before {
+			width: 2rem;
+		}
+
+		& a {
+			display: block;
+			transition: transform 0.3s ease-out;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 0rem;
+			height: 1px;
+			background-color: $clr-beige;
+			transition: width 0.3s ease-out;
+		}
+	}
+}

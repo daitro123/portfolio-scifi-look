@@ -6,10 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Aspiring web developer's portfolio website" />
 		<link rel="icon" type="image/svg+xml" href="img/Ellipse 11.svg" />
-		<link rel="stylesheet" href="/css/main.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="stylesheet" href="assets/dist/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -18,301 +19,103 @@
 			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
 			crossorigin="anonymous"
 		/>
-		<title>Tomas Macek - Portfolio</title>
+		<title>Tomáš Macek - Tvorba stránek</title>
 	</head>
 	<body>
+		<div id="cursor">
+			<div id="cursor-bg"></div>
+		</div>
 		<nav class="nav">
 			<ul class="nav__list">
 				<li
+					data-cursor="is-medium"
 					class="nav__item"
 					onclick="gsap.to(window, {duration: 1.2, scrollTo: '#portfolio'});"
 				>
 					Portfolio
 				</li>
 				<li
+					data-cursor="is-medium"
 					class="nav__item"
 					onclick="gsap.to(window, {duration: 1.2, scrollTo: '#contact'});"
 				>
-					Contact
+					Kontakt
 				</li>
 			</ul>
 		</nav>
 		<nav class="side-dot-nav">
 			<ul class="side-dot-nav__list">
-				<li
-					class="side-dot-nav__item side-dot-nav__item--home"
-					onclick="gsap.to(window, {duration: 1.2, scrollTo: 0});"
-				>
+				<li class="side-dot-nav__item side-dot-nav__item--home">
 					<span class="side-dot-nav__item--dot"></span>
-					<span class="side-dot-nav__item--label">home</span>
+					<span class="side-dot-nav__item--label">úvod</span>
 				</li>
-				<li
-					class="side-dot-nav__item side-dot-nav__item--portfolio"
-					onclick="gsap.to(window, {duration: 1.2, scrollTo: '#portfolio'});"
-				>
+				<li class="side-dot-nav__item side-dot-nav__item--portfolio">
 					<span class="side-dot-nav__item--dot"></span>
 					<span class="side-dot-nav__item--label">portfolio</span>
 				</li>
-				<li
-					class="side-dot-nav__item side-dot-nav__item--contact"
-					onclick="gsap.to(window, {duration: 1.2, scrollTo: '#contact'});"
-				>
+				<li class="side-dot-nav__item side-dot-nav__item--contact">
 					<span class="side-dot-nav__item--dot"></span>
-					<span class="side-dot-nav__item--label">contact</span>
+					<span class="side-dot-nav__item--label">kontakt</span>
 				</li>
 			</ul>
 		</nav>
 
 		<main>
 			<section class="hero">
-				<div class="circle circle--blue"></div>
-				<div class="circle circle--pinkish"></div>
-				<header>
-					<h1 class="hero__heading">Tomas Macek</h1>
-					<h4 class="hero__subheading">
-						<div>w</div>
-						<div>e</div>
-						<div>b</div>
-						<div></div>
-						<div>d</div>
-						<div>e</div>
-						<div>v</div>
-						<div>e</div>
-						<div>l</div>
-						<div>o</div>
-						<div>p</div>
-						<div>m</div>
-						<div>e</div>
-						<div>n</div>
-						<div>t</div>
-					</h4>
-				</header>
+				<div class="hero__text">
+					<p data-cursor="is-large">
+						Jmenuji se Tomáš Macek, jsem freelance
+						<span class="underline">developer</span> z Chebu se zaměřením na tvorbu
+						<span class="underline">webových&nbsp;stránek</span> a redakční systém
+						<span class="underline">Wordpress</span>.
+					</p>
+					<p class="hero__link">
+						<a
+							href="#"
+							onclick="gsap.to(window, {duration: 1.2, scrollTo: '#portfolio'});"
+							>Podívat se na práce
+						</a>
+					</p>
+				</div>
 			</section>
 
 			<section id="portfolio" class="portfolio">
 				<h2 class="portfolio__header">Portfolio</h2>
 				<div class="portfolio__grid">
-					<div class="portfolio__card portfolio__card--1">
-						<a href="https://zen-fermat-ff879e.netlify.app" target="_blank"
-							><img src="/img/realestate.jpg" alt="real estate website"
-						/></a>
-						<div class="card__text">
-							<h3 class="card__text--header">
-								<a
-									href="https://zen-fermat-ff879e.netlify.app"
-									target="_blank"
-									rel="noopener"
-									>Real Estate website concept</a
-								>
-							</h3>
-							<p class="card__text--description">
-								Real Estate website concept with business look suitable for larger
-								agencies with functional search options and blog section.
-							</p>
-							<p class="card__text--tech">Tech: HTML, SCSS, JS, jQuery UI</p>
+					<a class="portfolio__item" data-cursor="is-medium">
+						<div class="portfolio__image">
+							<img src="/assets/img/Mockup-realestate.jpg" alt="" />
 						</div>
-					</div>
-					<div class="portfolio__card portfolio__card--2">
-						<div class="card__text">
-							<h3 class="card__text--header">
-								<a
-									href="https://gifted-mcnulty-c4d140.netlify.app/"
-									target="_blank"
-									rel="noopener"
-									>Bakery website concept</a
-								>
-							</h3>
-							<p class="card__text--description">
-								Simple website with multiple animation using barba.js to provide
-								smooth page transitions as in single-page application.
-							</p>
-							<p class="card__text--tech">Tech: HTML, CSS, JS, barba.js, GSAP</p>
+						<div class="portfolio__overlay">Koncept - web realitní kanceláře</div>
+					</a>
+					<div class="portfolio__item" data-cursor="is-medium">
+						<div class="portfolio__image">
+							<img src="/assets/img/Mockup-sustr.jpg" alt="" />
 						</div>
-						<a href="https://gifted-mcnulty-c4d140.netlify.app/" target="_blank"
-							><img src="/img/bakery.JPG" alt="bakery website concept"
-						/></a>
+						<div class="portfolio__overlay">ŠU-STR - web stavební společnosti</div>
 					</div>
-					<div class="portfolio__card portfolio__card--3">
-						<div class="card__text">
-							<h3 class="card__text--header">
-								<a
-									href="https://musing-jang-474636.netlify.app/"
-									target="_blank"
-									rel="noopener"
-									>Cryptocurrency comparison app concept</a
-								>
-							</h3>
-							<p class="card__text--description">
-								Concept based around CoinGecko API allowing to fetch live as well as
-								historical cryptocurrency data.
-							</p>
-							<p class="card__text--tech">Tech: HTML, SCSS, JS, Charts.js</p>
+					<div class="portfolio__item" data-cursor="is-medium">
+						<div class="portfolio__image">
+							<img src="/assets/img/Desktop - 3.jpg" alt="" />
 						</div>
-						<a
-							href="https://musing-jang-474636.netlify.app/"
-							target="_blank"
-							rel="noopener"
-							><img src="/img/crypto.JPG" alt="crypto comparison concept"
-						/></a>
+						<div class="portfolio__overlay">Koncept - krypto app</div>
 					</div>
-					<div class="portfolio__card portfolio__card--4">
-						<div class="card__text">
-							<h3 class="card__text--header">
-								<a href="https://www.2zscheb.cz/" target="_blank" rel="noopener"
-									>2. Elementary school in Cheb - custom wordpress template</a
-								>
-							</h3>
-							<p class="card__text--description">
-								Custom Wordpress template with additional post type for events and
-								custom plugin for fetching daily meal menu from strava.cz API.
-							</p>
-							<p class="card__text--tech">Tech: HTML, SCSS, JS, Wordpress</p>
+					<div class="portfolio__item" data-cursor="is-medium">
+						<div class="portfolio__image">
+							<img src="/assets/img/Desktop - 4.jpg" alt="" />
 						</div>
-						<a href="https://www.2zscheb.cz/" target="_blank" rel="noopener"
-							><img src="/img/2zs_cheb.jpg" alt="2. základní škola"
-						/></a>
+						<div class="portfolio__overlay">Koncept - webové stránky pekařství</div>
 					</div>
-					<svg
-						id="first-circle"
-						class="portfolio__svg"
-						viewBox="0 0 316 316"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<circle
-							cx="158"
-							cy="158"
-							r="158"
-							transform="rotate(-180 158 158)"
-							fill="url(#paint2_linear)"
-						/>
-						<defs>
-							<linearGradient
-								id="paint2_linear"
-								x1="158"
-								y1="0"
-								x2="158"
-								y2="316"
-								gradientUnits="userSpaceOnUse"
-							>
-								<stop stop-color="#F84E58" />
-								<stop offset="1" stop-color="#688ABE" />
-							</linearGradient>
-						</defs>
-					</svg>
-
-					<svg
-						id="square"
-						class="portfolio__svg"
-						viewBox="0 0 437 438"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<rect
-							y="219.268"
-							width="308.679"
-							height="308.679"
-							rx="55"
-							transform="rotate(-45 0 219.268)"
-							fill="url(#paint1_linear)"
-						/>
-						<defs>
-							<linearGradient
-								id="paint1_linear"
-								x1="154.339"
-								y1="219.268"
-								x2="154.339"
-								y2="527.946"
-								gradientUnits="userSpaceOnUse"
-							>
-								<stop stop-color="#EB5D12" />
-								<stop offset="1" stop-color="#F84E58" />
-							</linearGradient>
-						</defs>
-					</svg>
-
-					<svg
-						id="triangle"
-						class="portfolio__svg"
-						viewBox="0 0 493 483"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M135.086 142.493C132.402 111.819 163.931 89.7417 191.838 102.755L453.447 224.745C481.354 237.759 484.709 276.102 459.486 293.764L223.034 459.329C197.811 476.99 162.927 460.724 160.244 430.049L135.086 142.493Z"
-							fill="url(#paint0_linear)"
-						/>
-						<defs>
-							<linearGradient
-								id="paint0_linear"
-								x1="129.047"
-								y1="73.4751"
-								x2="411.998"
-								y2="477.57"
-								gradientUnits="userSpaceOnUse"
-							>
-								<stop stop-color="#12EB5D" />
-								<stop offset="1" stop-color="#688ABE" />
-							</linearGradient>
-						</defs>
-					</svg>
-					<svg
-						id="second-circle"
-						class="portfolio__svg"
-						viewBox="0 0 371 373"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g filter="url(#filter0_d)">
-							<circle cx="178.5" cy="170.5" r="170.5" fill="url(#paint3_linear)" />
-						</g>
-						<defs>
-							<filter
-								id="filter0_d"
-								x="0"
-								y="0"
-								width="371"
-								height="373"
-								filterUnits="userSpaceOnUse"
-								color-interpolation-filters="sRGB"
-							>
-								<feFlood flood-opacity="0" result="BackgroundImageFix" />
-								<feColorMatrix
-									in="SourceAlpha"
-									type="matrix"
-									values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-								/>
-								<feOffset dx="7" dy="17" />
-								<feGaussianBlur stdDeviation="7.5" />
-								<feColorMatrix
-									type="matrix"
-									values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-								/>
-								<feBlend
-									mode="normal"
-									in2="BackgroundImageFix"
-									result="effect1_dropShadow"
-								/>
-								<feBlend
-									mode="normal"
-									in="SourceGraphic"
-									in2="effect1_dropShadow"
-									result="shape"
-								/>
-							</filter>
-							<linearGradient
-								id="paint3_linear"
-								x1="178.5"
-								y1="0"
-								x2="178.5"
-								y2="341"
-								gradientUnits="userSpaceOnUse"
-							>
-								<stop stop-color="#00CFEE" />
-								<stop offset="1" stop-color="#C262F4" />
-							</linearGradient>
-						</defs>
-					</svg>
+					<div class="portfolio__item" data-cursor="is-medium">
+						<div class="portfolio__image">
+							<img src="/assets/img/Mockup-2zs.jpg" alt="" />
+						</div>
+						<div class="portfolio__overlay">Webové stránky 2.ZŠ v Chebu</div>
+					</div>
+					<div class="portfolio__item">
+						<div class="portfolio__image"><img src="" alt="" /></div>
+						<div class="portfolio__overlay"></div>
+					</div>
 				</div>
 			</section>
 
@@ -325,47 +128,27 @@
 					<p>phone: +420 732 301 224</p>
 					<div class="contact__icons">
 						<a href="mailto:macek.tom@gmail.com" aria-label="Email"
-							><i class="fas fa-envelope"></i
+							><i class="fas fa-envelope" data-cursor="is-medium"></i
 						></a>
 						<a
 							href="https://www.linkedin.com/in/tomas-macek-0868aa33"
 							target="_blank"
 							rel="noopener"
 							aria-label="LinkedIn"
-							><i class="fab fa-linkedin"></i
+							><i class="fab fa-linkedin" data-cursor="is-medium"></i
 						></a>
 						<a
 							href="https://github.com/daitro123"
 							target="_blank"
 							rel="noopener"
 							aria-label="Github"
-							><i class="fab fa-github-square"></i
+							><i class="fab fa-github-square" data-cursor="is-medium"></i
 						></a>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
-			integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"
-			integrity="sha512-QcYm1q7RbnXmwY7HJ0H7938IS0MalTPYqGUF0fIwQgEjMBt2tqjDBt+R5I+ppdwEohjMdHnFU0H+RxmrGQ8qcg=="
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"
-			integrity="sha512-9DDJWj17gkdeGHU0Zr76wc9jY2g0IwE7ZCIxakVYKyzlTiOWZDZJOTaVgAzNo+LB7+EbGXxwCXkOP+a5rgkuqQ=="
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/MotionPathPlugin.min.js"
-			integrity="sha512-lU49UnjuDyVRzZFkzDNDJOtavmwy+c412aZ8JgIxgSza34IbtxvcCDtZdlZ3Ay9t9O22qX1QoGGqILPHRT4bTg=="
-			crossorigin="anonymous"
-		></script>
-		<script src="index.js"></script>
+		<script src="assets/dist/index.js"></script>
 	</body>
 </html>

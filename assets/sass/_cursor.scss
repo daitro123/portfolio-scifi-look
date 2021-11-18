@@ -1,0 +1,33 @@
+#cursor {
+	display: none;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	mix-blend-mode: exclusion;
+	z-index: 1000;
+	pointer-events: none;
+	transition: transform 0.2s ease-out;
+}
+
+#cursor-bg {
+	opacity: 0;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	background: #fff;
+	backface-visibility: hidden;
+	pointer-events: none;
+	mix-blend-mode: exclusion;
+	z-index: 1000;
+	transform: scale(1);
+	transition: transform 0.1s ease-out, opacity 0.2s ease-out;
+
+	&.is-medium {
+		opacity: 1;
+		transform: scale(3);
+	}
+
+	&.is-large {
+		opacity: 1;
+		transform: scale(8);
+	}
+}

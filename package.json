@@ -1,0 +1,36 @@
+{
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "npm run development",
+		"development": "mix",
+		"watch": "mix watch",
+		"watch-poll": "mix watch -- --watch-options-poll=1000",
+		"hot": "mix watch --hot",
+		"prod": "npm run production",
+		"production": "mix --production"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/daitro123/portfolio-scifi-look.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/daitro123/portfolio-scifi-look/issues"
+	},
+	"homepage": "https://github.com/daitro123/portfolio-scifi-look#readme",
+	"dependencies": {
+		"gsap": "^3.8.0",
+		"smooth-scrollbar": "^8.7.0",
+		"swiper": "^7.2.0"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.0",
+		"laravel-mix": "^6.0.39",
+		"sass": "^1.43.4",
+		"sass-loader": "^12.1.0"
+	}
+}

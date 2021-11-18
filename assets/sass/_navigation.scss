@@ -1,5 +1,5 @@
 .nav {
-	padding: 10rem;
+	padding: 10rem 0;
 	font-size: 2rem;
 	font-weight: 300;
 	color: $clr-grey-light;
@@ -7,7 +7,7 @@
 	margin: 0 auto 0 auto;
 
 	@media screen and (max-width: $medium) {
-		margin: 0 auto 6rem auto;
+		margin: 0 auto 0rem auto;
 	}
 
 	@media screen and (max-width: $small) {
@@ -24,27 +24,28 @@
 	&__item {
 		cursor: pointer;
 		position: relative;
-		text-transform: uppercase;
-		font-size: 1.4rem;
-		font-weight: 400;
+		text-transform: lowercase;
+		font-size: 1.8rem;
+		font-weight: 600;
+		color: $clr-beige;
 
 		&::before {
 			content: "";
 			position: absolute;
-			bottom: -1rem;
-			width: 100%;
-			height: 1px;
-			background-color: $clr-grey-light;
-			transform: scaleX(0);
-			transition: transform 0.3s ease-out;
-			transform-origin: left;
+			bottom: 0rem;
+			width: 0;
+			height: 100%;
+			background-color: $black;
+			z-index: -1;
 		}
 
 		&:hover {
-			// color: $clr-blue;
+			// color: $black;
 
 			&::before {
-				transform: scaleX(100%);
+				animation-name: blackLine;
+				animation-fill-mode: forwards;
+				animation-duration: 0.8s;
 			}
 		}
 
@@ -62,8 +63,12 @@
 	color: $clr-grey-light;
 	font-size: 1.5rem;
 	padding-left: 2rem;
-	z-index: 10;
+	z-index: 999;
 	visibility: hidden;
+
+	@media screen and (max-width: $medium) {
+		display: none;
+	}
 
 	&__item {
 		padding: 0.8rem;
@@ -79,6 +84,7 @@
 			border-radius: 50%;
 			margin-right: 2rem;
 			position: relative;
+			box-shadow: 0px 0px 25px 2px rgba($color: $black, $alpha: 0.6);
 
 			&::before {
 				content: "";
@@ -127,6 +133,7 @@
 			opacity: 0;
 			transform: translateX(10px);
 			transition: all 0.3s linear;
+			text-shadow: 0 0 5px rgba($color: $black, $alpha: 0.6);
 		}
 	}
 }

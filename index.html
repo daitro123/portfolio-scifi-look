@@ -9,145 +9,214 @@
 		<link rel="stylesheet" href="assets/dist/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&family=Montserrat:ital,wght@0,100;0,400;0,600;0,800;1,100;1,400;1,600&display=swap"
 			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-			crossorigin="anonymous"
 		/>
 		<title>Tomáš Macek - Tvorba stránek</title>
 	</head>
-	<body>
-		<div id="cursor">
-			<div id="cursor-bg"></div>
+	<body data-barba="wrapper">
+		<div id="smooth-scrollbar">
+			<div id="cursor">
+				<div id="cursor-bg"></div>
+			</div>
+
+			<nav class="side-dot-nav">
+				<ul class="side-dot-nav__list">
+					<li class="side-dot-nav__item side-dot-nav__item--home">
+						<span class="side-dot-nav__item--dot"></span>
+						<span class="side-dot-nav__item--label">úvod</span>
+					</li>
+					<li class="side-dot-nav__item side-dot-nav__item--portfolio">
+						<span class="side-dot-nav__item--dot"></span>
+						<span class="side-dot-nav__item--label">portfolio</span>
+					</li>
+					<li class="side-dot-nav__item side-dot-nav__item--contact">
+						<span class="side-dot-nav__item--dot"></span>
+						<span class="side-dot-nav__item--label">kontakt</span>
+					</li>
+				</ul>
+			</nav>
+
+			<header>
+				<nav class="nav">
+					<ul class="nav__list">
+						<li data-cursor="is-medium" class="nav__item">
+							<a href="#portfolio" class="nav__link">Portfolio</a>
+						</li>
+						<li data-cursor="is-medium" class="nav__item">
+							<a href="#contact" class="nav__link">Kontakt</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<main>
+				<section class="hero">
+					<div class="hero__text">
+						<p data-cursor="is-large">
+							Jmenuji se Tomáš Macek, jsem freelance
+							<span class="underline">developer</span> z Chebu se zaměřením na tvorbu
+							<span class="underline">webových&nbsp;stránek</span> a redakční systém
+							<span class="underline">Wordpress</span>.
+						</p>
+						<p class="hero__link">
+							<a
+								href="#"
+								onclick="gsap.to(window, {duration: 1.2, scrollTo: '#portfolio'});"
+								>Podívat se na práce
+							</a>
+						</p>
+					</div>
+				</section>
+
+				<section id="portfolio" class="portfolio">
+					<h2 class="portfolio__header">Portfolio</h2>
+					<div class="portfolio__grid">
+						<div
+							class="portfolio__item"
+							data-cursor="is-medium"
+							data-anim-direction="fromTop"
+						>
+							<div class="portfolio__image">
+								<img src="/assets/img/Mockup-realestate.jpg" alt="" />
+							</div>
+							<!-- <div class="portfolio__overlay">Koncept - web realitní kanceláře</div> -->
+							<div class="cover"></div>
+							<div class="overview">
+								<div class="overview__container">
+									<h3>
+										Koncept <br />
+										<span class="text-outline">web realitní kanceláře</span>
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__item" data-anim-direction="fromLeft">
+							<div class="portfolio__image">
+								<img src="/assets/img/Mockup-sustr.jpg" alt="" />
+							</div>
+							<!-- <div class="portfolio__overlay">ŠU-STR - web stavební společnosti</div> -->
+							<div class="cover"></div>
+							<div class="overview">
+								<div class="overview__container">
+									<h3>
+										ŠU-STR <br />
+										<span class="text-outline">web stavební společnosti</span>
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div
+							class="portfolio__item"
+							data-cursor="is-medium"
+							data-anim-direction="fromTop"
+						>
+							<div class="portfolio__image">
+								<img src="/assets/img/Desktop - 3.jpg" alt="" />
+							</div>
+							<!-- <div class="portfolio__overlay">Koncept - krypto app</div> -->
+							<div class="cover"></div>
+							<div class="overview">
+								<div class="overview__container">
+									<h3>
+										Koncept <br />
+										<span class="text-outline">krypto app</span>
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div
+							class="portfolio__item"
+							data-cursor="is-medium"
+							data-anim-direction="fromBottom"
+						>
+							<div class="portfolio__image">
+								<img src="/assets/img/Desktop - 4.jpg" alt="" />
+							</div>
+							<!-- <div class="portfolio__overlay">Koncept - webové stránky pekařství</div> -->
+							<div class="cover"></div>
+							<div class="overview">
+								<div class="overview__container">
+									<h3>
+										Koncept <br />
+										<span class="text-outline">webové stránky pekařství</span>
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div
+							class="portfolio__item"
+							data-cursor="is-medium"
+							data-anim-direction="fromTop"
+						>
+							<div class="portfolio__image">
+								<img src="/assets/img/Mockup-2zs.jpg" alt="" />
+							</div>
+							<!-- <div class="portfolio__overlay">Webové stránky 2.ZŠ v Chebu</div> -->
+							<div class="cover"></div>
+							<div class="overview">
+								<div class="overview__container">
+									<h3>
+										2.ZŠ v Chebu <br />
+										<span class="text-outline">webové stránky</span>
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__item">
+							<div class="portfolio__image"><img src="" alt="" /></div>
+							<div class="portfolio__overlay">
+								<a href="">
+									Máte zájem o spolupráci?<br />
+									Neváhejte mě kontaktovat
+								</a>
+							</div>
+							<!-- <div class="cover"></div>
+							<div class="overview">
+								<div class="overview__container">
+									<h3>
+										Koncept <br />
+										<span class="text-outline">web realitní kanceláře</span>
+									</h3>
+								</div>
+							</div> -->
+						</div>
+					</div>
+				</section>
+
+				<section id="contact" class="contact">
+					<h2 class="contact__header">Contact</h2>
+					<div class="circle circle--greenish"></div>
+					<div class="circle circle--blueish"></div>
+					<div class="contact__card">
+						<p>email: <a href="mailto:macek.tom@gmail.com">macek.tom@gmail.com</a></p>
+						<p>phone: +420 732 301 224</p>
+						<div class="contact__icons">
+							<a href="mailto:macek.tom@gmail.com" aria-label="Email"
+								><i class="fas fa-envelope" data-cursor="is-medium"></i
+							></a>
+							<a
+								href="https://www.linkedin.com/in/tomas-macek-0868aa33"
+								target="_blank"
+								rel="noopener"
+								aria-label="LinkedIn"
+								><i class="fab fa-linkedin" data-cursor="is-medium"></i
+							></a>
+							<a
+								href="https://github.com/daitro123"
+								target="_blank"
+								rel="noopener"
+								aria-label="Github"
+								><i class="fab fa-github-square" data-cursor="is-medium"></i
+							></a>
+						</div>
+					</div>
+				</section>
+			</main>
 		</div>
-		<nav class="nav">
-			<ul class="nav__list">
-				<li
-					data-cursor="is-medium"
-					class="nav__item"
-					onclick="gsap.to(window, {duration: 1.2, scrollTo: '#portfolio'});"
-				>
-					Portfolio
-				</li>
-				<li
-					data-cursor="is-medium"
-					class="nav__item"
-					onclick="gsap.to(window, {duration: 1.2, scrollTo: '#contact'});"
-				>
-					Kontakt
-				</li>
-			</ul>
-		</nav>
-		<nav class="side-dot-nav">
-			<ul class="side-dot-nav__list">
-				<li class="side-dot-nav__item side-dot-nav__item--home">
-					<span class="side-dot-nav__item--dot"></span>
-					<span class="side-dot-nav__item--label">úvod</span>
-				</li>
-				<li class="side-dot-nav__item side-dot-nav__item--portfolio">
-					<span class="side-dot-nav__item--dot"></span>
-					<span class="side-dot-nav__item--label">portfolio</span>
-				</li>
-				<li class="side-dot-nav__item side-dot-nav__item--contact">
-					<span class="side-dot-nav__item--dot"></span>
-					<span class="side-dot-nav__item--label">kontakt</span>
-				</li>
-			</ul>
-		</nav>
-
-		<main>
-			<section class="hero">
-				<div class="hero__text">
-					<p data-cursor="is-large">
-						Jmenuji se Tomáš Macek, jsem freelance
-						<span class="underline">developer</span> z Chebu se zaměřením na tvorbu
-						<span class="underline">webových&nbsp;stránek</span> a redakční systém
-						<span class="underline">Wordpress</span>.
-					</p>
-					<p class="hero__link">
-						<a
-							href="#"
-							onclick="gsap.to(window, {duration: 1.2, scrollTo: '#portfolio'});"
-							>Podívat se na práce
-						</a>
-					</p>
-				</div>
-			</section>
-
-			<section id="portfolio" class="portfolio">
-				<h2 class="portfolio__header">Portfolio</h2>
-				<div class="portfolio__grid">
-					<a class="portfolio__item" data-cursor="is-medium">
-						<div class="portfolio__image">
-							<img src="/assets/img/Mockup-realestate.jpg" alt="" />
-						</div>
-						<div class="portfolio__overlay">Koncept - web realitní kanceláře</div>
-					</a>
-					<div class="portfolio__item" data-cursor="is-medium">
-						<div class="portfolio__image">
-							<img src="/assets/img/Mockup-sustr.jpg" alt="" />
-						</div>
-						<div class="portfolio__overlay">ŠU-STR - web stavební společnosti</div>
-					</div>
-					<div class="portfolio__item" data-cursor="is-medium">
-						<div class="portfolio__image">
-							<img src="/assets/img/Desktop - 3.jpg" alt="" />
-						</div>
-						<div class="portfolio__overlay">Koncept - krypto app</div>
-					</div>
-					<div class="portfolio__item" data-cursor="is-medium">
-						<div class="portfolio__image">
-							<img src="/assets/img/Desktop - 4.jpg" alt="" />
-						</div>
-						<div class="portfolio__overlay">Koncept - webové stránky pekařství</div>
-					</div>
-					<div class="portfolio__item" data-cursor="is-medium">
-						<div class="portfolio__image">
-							<img src="/assets/img/Mockup-2zs.jpg" alt="" />
-						</div>
-						<div class="portfolio__overlay">Webové stránky 2.ZŠ v Chebu</div>
-					</div>
-					<div class="portfolio__item">
-						<div class="portfolio__image"><img src="" alt="" /></div>
-						<div class="portfolio__overlay"></div>
-					</div>
-				</div>
-			</section>
-
-			<section id="contact" class="contact">
-				<h2 class="contact__header">Contact</h2>
-				<div class="circle circle--greenish"></div>
-				<div class="circle circle--blueish"></div>
-				<div class="contact__card">
-					<p>email: <a href="mailto:macek.tom@gmail.com">macek.tom@gmail.com</a></p>
-					<p>phone: +420 732 301 224</p>
-					<div class="contact__icons">
-						<a href="mailto:macek.tom@gmail.com" aria-label="Email"
-							><i class="fas fa-envelope" data-cursor="is-medium"></i
-						></a>
-						<a
-							href="https://www.linkedin.com/in/tomas-macek-0868aa33"
-							target="_blank"
-							rel="noopener"
-							aria-label="LinkedIn"
-							><i class="fab fa-linkedin" data-cursor="is-medium"></i
-						></a>
-						<a
-							href="https://github.com/daitro123"
-							target="_blank"
-							rel="noopener"
-							aria-label="Github"
-							><i class="fab fa-github-square" data-cursor="is-medium"></i
-						></a>
-					</div>
-				</div>
-			</section>
-		</main>
 
 		<script src="assets/dist/index.js"></script>
 	</body>

@@ -6,8 +6,11 @@ import "./porfolio.js";
 
 const bodyScrollBar = Scrollbar.init(document.querySelector("#smooth-scrollbar"), {
 	damping: 0.06,
-	renderByPixels: false,
+	// renderByPixels: false,
 });
+
+bodyScrollBar.setPosition(0, 0);
+bodyScrollBar.track.xAxis.element.remove();
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -16,6 +19,7 @@ ScrollTrigger.scrollerProxy(document.body, {
 		if (arguments.length) {
 			bodyScrollBar.scrollTop = value;
 		}
+
 		return bodyScrollBar.scrollTop;
 	},
 });
@@ -35,6 +39,17 @@ ScrollTrigger.matchMedia({
 	},
 });
 
+gsap.to(".lines circle", {
+	scale: 1.1,
+	// yPercent: 25,
+	scrollTrigger: {
+		trigger: ".lines",
+		start: "top top",
+		scrub: 1,
+		// markers: true,
+	},
+});
+
 /*
  * SIDE NAVIGATION
  */
@@ -43,15 +58,21 @@ const sideNavDotPortfolio = document.querySelector(".side-dot-nav__item--portfol
 const sideNavDotContact = document.querySelector(".side-dot-nav__item--contact");
 
 sideNavDotContact.addEventListener("click", () => {
-	gsap.to(window, { duration: 1.2, scrollTo: "#contact" });
+	bodyScrollBar.scrollIntoView(document.querySelector("#contact"), {
+		damping: 0.06,
+	});
 });
 
 sideNavDotPortfolio.addEventListener("click", () => {
-	gsap.to(window, { duration: 1.2, scrollTo: "#portfolio" });
+	bodyScrollBar.scrollIntoView(document.querySelector("#portfolio"), {
+		damping: 0.06,
+	});
 });
 
 sideNavDotHome.addEventListener("click", () => {
-	gsap.to(window, { duration: 1.2, scrollTo: 0 });
+	bodyScrollBar.scrollIntoView(document.querySelector("#top-header"), {
+		damping: 0.06,
+	});
 });
 
 gsap.to(".side-dot-nav", {
@@ -92,23 +113,3 @@ menuLinks.forEach((link) => {
 		});
 	});
 });
-
-// const cursor = document.getElementById("cursor");
-// const cursorBg = document.getElementById("cursor-bg");
-// let yAxis = 0;
-// let xAxis = 0;
-// let cursorSizeClass;
-
-// window.addEventListener("mousemove", (e) => {
-// 	yAxis = e.clientY;
-// 	xAxis = e.clientX;
-// 	cursorSizeClass = e.target.dataset.cursor;
-
-// 	if (cursorSizeClass) {
-// 		cursorBg.classList.add(cursorSizeClass);
-// 	} else {
-// 		cursorBg.classList = "";
-// 	}
-
-// 	cursor.style.transform = `translate(${xAxis}px, ${yAxis}px) translate(-50%, -50%)`;
-// });

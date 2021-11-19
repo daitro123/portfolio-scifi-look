@@ -41,3 +41,44 @@
 		animation-delay: 0.4s;
 	}
 }
+
+.text-serif {
+	font-family: "Playfair Display", serif;
+}
+
+.enlarge {
+	transition: transform 0.4s ease-out;
+
+	&:hover,
+	&:focus-visible {
+		transform: scale(1.1);
+	}
+}
+
+.lines {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	overflow: hidden;
+	height: 100%;
+
+	& svg {
+		& circle {
+			stroke-dasharray: 6000;
+			stroke-dashoffset: 6000;
+			animation: dash 3s linear forwards;
+		}
+
+		// triangle
+		& path {
+			stroke-dasharray: 5000;
+			stroke-dashoffset: 5000;
+			animation: dash 3s ease 2s forwards;
+
+			@media (max-width: $small) {
+				transform: translateX(-20%) scale(0.7);
+			}
+		}
+	}
+}

@@ -16,4 +16,4 @@ mix.sass("assets/sass/main.scss", "assets/dist").options({
 	postCss: [require("autoprefixer")],
 });
 
-mix.js("assets/js/index.js", "assets/dist");
+mix.js("assets/js/index.js", "assets/dist").sourceMaps();

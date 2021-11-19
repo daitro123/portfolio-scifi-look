@@ -4,43 +4,60 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Aspiring web developer's portfolio website" />
-		<link rel="icon" type="image/svg+xml" href="img/Ellipse 11.svg" />
+		<meta
+			name="description"
+			content="Tvorba webových stránek. Tomáš Macek - front-end developer, kódování HTML šablon, tvorba Wordpress webů"
+		/>
 		<link rel="stylesheet" href="assets/dist/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;800&family=Montserrat:ital,wght@0,100;0,400;0,600;0,800;1,100;1,400;1,600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,600;0,800;1,100;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Tomáš Macek - Tvorba stránek</title>
+		<title>Tomáš Macek - Web development</title>
 	</head>
 	<body data-barba="wrapper">
+		<nav class="side-dot-nav">
+			<ul class="side-dot-nav__list">
+				<li class="side-dot-nav__item side-dot-nav__item--home">
+					<span class="side-dot-nav__item--dot"></span>
+					<span class="side-dot-nav__item--label">úvod</span>
+				</li>
+				<li class="side-dot-nav__item side-dot-nav__item--portfolio">
+					<span class="side-dot-nav__item--dot"></span>
+					<span class="side-dot-nav__item--label">portfolio</span>
+				</li>
+				<li class="side-dot-nav__item side-dot-nav__item--contact">
+					<span class="side-dot-nav__item--dot"></span>
+					<span class="side-dot-nav__item--label">kontakt</span>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- <div id="cursor">
+			<div id="cursor-bg"></div>
+		</div> -->
+
 		<div id="smooth-scrollbar">
-			<div id="cursor">
-				<div id="cursor-bg"></div>
+			<div class="lines">
+				<svg
+					width="1857"
+					height="1734"
+					viewBox="0 0 1857 1734"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M583.116 575.869L1656.12 575.869L1119.62 1505.12L583.116 575.869Z"
+						stroke="#5E5E5E"
+						stroke-opacity="0.50s"
+					/>
+					<circle cx="573" cy="573" r="572.5" stroke="black" stroke-opacity="0.25" />
+				</svg>
 			</div>
 
-			<nav class="side-dot-nav">
-				<ul class="side-dot-nav__list">
-					<li class="side-dot-nav__item side-dot-nav__item--home">
-						<span class="side-dot-nav__item--dot"></span>
-						<span class="side-dot-nav__item--label">úvod</span>
-					</li>
-					<li class="side-dot-nav__item side-dot-nav__item--portfolio">
-						<span class="side-dot-nav__item--dot"></span>
-						<span class="side-dot-nav__item--label">portfolio</span>
-					</li>
-					<li class="side-dot-nav__item side-dot-nav__item--contact">
-						<span class="side-dot-nav__item--dot"></span>
-						<span class="side-dot-nav__item--label">kontakt</span>
-					</li>
-				</ul>
-			</nav>
-
-			<header>
+			<header id="top-header">
 				<nav class="nav">
 					<ul class="nav__list">
 						<li data-cursor="is-medium" class="nav__item">
@@ -63,11 +80,7 @@
 							<span class="underline">Wordpress</span>.
 						</p>
 						<p class="hero__link">
-							<a
-								href="#"
-								onclick="gsap.to(window, {duration: 1.2, scrollTo: '#portfolio'});"
-								>Podívat se na práce
-							</a>
+							<a href="#">Podívat se na práce </a>
 						</p>
 					</div>
 				</section>
@@ -75,45 +88,82 @@
 				<section id="portfolio" class="portfolio">
 					<h2 class="portfolio__header">Portfolio</h2>
 					<div class="portfolio__grid">
-						<div
-							class="portfolio__item"
-							data-cursor="is-medium"
-							data-anim-direction="fromTop"
-						>
+						<div class="portfolio__item">
 							<div class="portfolio__image">
 								<img src="/assets/img/Mockup-realestate.jpg" alt="" />
 							</div>
 							<!-- <div class="portfolio__overlay">Koncept - web realitní kanceláře</div> -->
 							<div class="cover"></div>
 							<div class="overview">
-								<div class="overview__container">
+								<div class="overview__container" data-cursor="is-medium">
 									<h3>
 										Koncept <br />
-										<span class="text-outline">web realitní kanceláře</span>
+										<span class="text-outline"
+											>web <br />
+											realitní <br />
+											kanceláře</span
+										>
 									</h3>
+									<a
+										href="https://zen-fermat-ff879e.netlify.app/"
+										target="_blank"
+										class="overview__link"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="48"
+											height="48"
+											fill="currentColor"
+											class="bi bi-arrow-right-circle"
+											viewBox="0 0 16 16"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+											/>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>
-						<div class="portfolio__item" data-anim-direction="fromLeft">
+						<div class="portfolio__item">
 							<div class="portfolio__image">
 								<img src="/assets/img/Mockup-sustr.jpg" alt="" />
 							</div>
-							<!-- <div class="portfolio__overlay">ŠU-STR - web stavební společnosti</div> -->
 							<div class="cover"></div>
 							<div class="overview">
 								<div class="overview__container">
 									<h3>
 										ŠU-STR <br />
-										<span class="text-outline">web stavební společnosti</span>
+										<span class="text-outline"
+											>web <br />
+											stavební <br />
+											společnosti</span
+										>
 									</h3>
+									<a
+										href="https://www.su-str.cz/"
+										target="_blank"
+										class="overview__link"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="48"
+											height="48"
+											fill="currentColor"
+											class="bi bi-arrow-right-circle"
+											viewBox="0 0 16 16"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+											/>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>
-						<div
-							class="portfolio__item"
-							data-cursor="is-medium"
-							data-anim-direction="fromTop"
-						>
+						<div class="portfolio__item">
 							<div class="portfolio__image">
 								<img src="/assets/img/Desktop - 3.jpg" alt="" />
 							</div>
@@ -123,16 +173,34 @@
 								<div class="overview__container">
 									<h3>
 										Koncept <br />
-										<span class="text-outline">krypto app</span>
+										<span class="text-outline"
+											>krypto <br />
+											app</span
+										>
 									</h3>
+									<a
+										href="https://musing-jang-474636.netlify.app/"
+										target="_blank"
+										class="overview__link"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="48"
+											height="48"
+											fill="currentColor"
+											class="bi bi-arrow-right-circle"
+											viewBox="0 0 16 16"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+											/>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>
-						<div
-							class="portfolio__item"
-							data-cursor="is-medium"
-							data-anim-direction="fromBottom"
-						>
+						<div class="portfolio__item">
 							<div class="portfolio__image">
 								<img src="/assets/img/Desktop - 4.jpg" alt="" />
 							</div>
@@ -142,16 +210,35 @@
 								<div class="overview__container">
 									<h3>
 										Koncept <br />
-										<span class="text-outline">webové stránky pekařství</span>
+										<span class="text-outline"
+											>webové <br />
+											stránky <br />
+											pekařství</span
+										>
 									</h3>
+									<a
+										href="https://gifted-mcnulty-c4d140.netlify.app/"
+										target="_blank"
+										class="overview__link"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="48"
+											height="48"
+											fill="currentColor"
+											class="bi bi-arrow-right-circle"
+											viewBox="0 0 16 16"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+											/>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>
-						<div
-							class="portfolio__item"
-							data-cursor="is-medium"
-							data-anim-direction="fromTop"
-						>
+						<div class="portfolio__item">
 							<div class="portfolio__image">
 								<img src="/assets/img/Mockup-2zs.jpg" alt="" />
 							</div>
@@ -161,15 +248,36 @@
 								<div class="overview__container">
 									<h3>
 										2.ZŠ v Chebu <br />
-										<span class="text-outline">webové stránky</span>
+										<span class="text-outline"
+											>webové <br />
+											stránky</span
+										>
 									</h3>
+									<a
+										href="https://www.2zscheb.cz/"
+										target="_blank"
+										class="overview__link"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="48"
+											height="48"
+											fill="currentColor"
+											class="bi bi-arrow-right-circle"
+											viewBox="0 0 16 16"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+											/>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>
 						<div class="portfolio__item">
-							<div class="portfolio__image"><img src="" alt="" /></div>
 							<div class="portfolio__overlay">
-								<a href="">
+								<a href="" class="text-serif enlarge">
 									Máte zájem o spolupráci?<br />
 									Neváhejte mě kontaktovat
 								</a>
@@ -188,31 +296,31 @@
 				</section>
 
 				<section id="contact" class="contact">
-					<h2 class="contact__header">Contact</h2>
-					<div class="circle circle--greenish"></div>
-					<div class="circle circle--blueish"></div>
+					<!-- <div class="contact-box">
+						<svg
+							width="1339"
+							height="627"
+							viewBox="0 0 1339 627"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								x="0.5"
+								y="0.5"
+								width="1338"
+								height="626"
+								stroke="#C7A780"
+								stroke-opacity="0.25"
+							/>
+						</svg>
+					</div> -->
+
+					<h2 class="contact__header">Kontakt</h2>
+
 					<div class="contact__card">
 						<p>email: <a href="mailto:macek.tom@gmail.com">macek.tom@gmail.com</a></p>
 						<p>phone: +420 732 301 224</p>
-						<div class="contact__icons">
-							<a href="mailto:macek.tom@gmail.com" aria-label="Email"
-								><i class="fas fa-envelope" data-cursor="is-medium"></i
-							></a>
-							<a
-								href="https://www.linkedin.com/in/tomas-macek-0868aa33"
-								target="_blank"
-								rel="noopener"
-								aria-label="LinkedIn"
-								><i class="fab fa-linkedin" data-cursor="is-medium"></i
-							></a>
-							<a
-								href="https://github.com/daitro123"
-								target="_blank"
-								rel="noopener"
-								aria-label="Github"
-								><i class="fab fa-github-square" data-cursor="is-medium"></i
-							></a>
-						</div>
+						<div class="contact__icons"></div>
 					</div>
 				</section>
 			</main>

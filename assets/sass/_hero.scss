@@ -4,6 +4,8 @@
 	min-height: 75vh;
 	max-width: 120rem;
 	margin: 0 auto;
+	margin-top: 6rem;
+	color: $black;
 
 	@media screen and (max-width: $small) {
 		margin-top: 4rem;
@@ -33,12 +35,16 @@
 		color: $clr-beige;
 		position: relative;
 		display: inline-block;
+		font-family: "Playfair Display", serif;
+		// font-style: italic;
+		// letter-spacing: 6px;
 
 		&:hover a {
 			transform: translateX(2.6rem);
 		}
 
 		&:hover::before {
+			// opacity: 1;
 			width: 2rem;
 		}
 
@@ -50,12 +56,13 @@
 		&::before {
 			content: "";
 			position: absolute;
+			// opacity: 0;
 			left: 0;
 			top: 50%;
 			width: 0rem;
 			height: 1px;
 			background-color: $clr-beige;
-			// transition: width 0.6s ease-out;
+			transition: width 0.3s ease-out;
 		}
 	}
 }

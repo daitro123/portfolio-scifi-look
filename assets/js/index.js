@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Scrollbar from "smooth-scrollbar";
 import "./porfolio.js";
+import "./form.js";
 
 const bodyScrollBar = Scrollbar.init(document.querySelector("#smooth-scrollbar"), {
 	damping: 0.06,
@@ -29,11 +30,48 @@ ScrollTrigger.matchMedia({
 		gsap.from(".portfolio__header", {
 			xPercent: -25,
 			autoAlpha: 0,
-			duration: 1.5,
 			scrollTrigger: {
 				trigger: ".portfolio__header",
 				ease: "Power2.out",
 				start: "center bottom", // the default values
+				scrub: 1.5,
+			},
+		});
+
+		gsap.from(".contact__header", {
+			xPercent: 25,
+			autoAlpha: 0,
+			scrollTrigger: {
+				trigger: ".contact__header",
+				ease: "Power2.out",
+				start: "center bottom", // the default values
+				scrub: 1.5,
+			},
+		});
+	},
+	"min-width: 1200px": function () {
+		gsap.to(".side-dot-nav", {
+			xPercent: 100,
+			autoAlpha: 1,
+			scrollTrigger: {
+				trigger: ".portfolio",
+				start: "top center", // the default values
+				end: "bottom center",
+				toggleActions: "play none none reverse",
+				onEnter: () => {
+					sideNavDotPortfolio.classList.add("side-dot-nav__item--active");
+				},
+				onLeave: () => {
+					sideNavDotPortfolio.classList.remove("side-dot-nav__item--active");
+					sideNavDotContact.classList.add("side-dot-nav__item--active");
+				},
+				onEnterBack: () => {
+					sideNavDotPortfolio.classList.add("side-dot-nav__item--active");
+					sideNavDotContact.classList.remove("side-dot-nav__item--active");
+				},
+				onLeaveBack: () => {
+					sideNavDotPortfolio.classList.remove("side-dot-nav__item--active");
+				},
 			},
 		});
 	},
@@ -75,33 +113,10 @@ sideNavDotHome.addEventListener("click", () => {
 	});
 });
 
-gsap.to(".side-dot-nav", {
-	xPercent: 100,
-	autoAlpha: 1,
-	scrollTrigger: {
-		trigger: ".portfolio",
-		start: "top center", // the default values
-		end: "bottom center",
-		toggleActions: "play none none reverse",
-		onEnter: () => {
-			sideNavDotPortfolio.classList.add("side-dot-nav__item--active");
-		},
-		onLeave: () => {
-			sideNavDotPortfolio.classList.remove("side-dot-nav__item--active");
-			sideNavDotContact.classList.add("side-dot-nav__item--active");
-		},
-		onEnterBack: () => {
-			sideNavDotPortfolio.classList.add("side-dot-nav__item--active");
-			sideNavDotContact.classList.remove("side-dot-nav__item--active");
-		},
-		onLeaveBack: () => {
-			sideNavDotPortfolio.classList.remove("side-dot-nav__item--active");
-		},
-	},
-});
+// ScrollTrigger.matchMedia({});
 
 /* Top Links */
-const menuLinks = document.querySelectorAll(".nav__link");
+const menuLinks = document.querySelectorAll(".nav__link, .link-to-contact");
 
 menuLinks.forEach((link) => {
 	const target = link.getAttribute("href");

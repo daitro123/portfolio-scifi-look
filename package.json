@@ -23,11 +23,9 @@
 	},
 	"homepage": "https://github.com/daitro123/portfolio-scifi-look#readme",
 	"dependencies": {
-		"@barba/core": "^2.9.7",
-		"circletype": "^2.3.0",
 		"gsap": "^3.8.0",
-		"smooth-scrollbar": "^8.7.0",
-		"swiper": "^7.2.0"
+		"jquery": "^3.6.0",
+		"smooth-scrollbar": "^8.7.0"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.0",

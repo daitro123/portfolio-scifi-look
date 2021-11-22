@@ -1,0 +1,224 @@
+.form {
+	padding-bottom: 4rem;
+	text-align: left;
+
+	& .wrapper {
+		max-width: 26.25rem;
+		margin: 0 auto;
+	}
+
+	.form-control {
+		margin-bottom: 1.6rem;
+		position: relative;
+
+		&:before:focus-within {
+			transform: scaleX(1);
+		}
+	}
+
+	&__focus-line {
+		width: 100%;
+		height: auto;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-bottom: 1px solid rgba($color: $clr-beige, $alpha: 1);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.3s ease;
+	}
+
+	input[type="text"],
+	input[type="email"] {
+		background: rgba($black, 0.15);
+		border: 0;
+		height: 5rem;
+		font-size: 1.6em;
+		font-weight: 400;
+		width: 100%;
+		padding: 0 1.5rem;
+		outline: none;
+		color: $clr-grey-light;
+		font-family: "Montserrat", serif;
+	}
+
+	input[type="text"]:focus ~ .form__focus-line,
+	input[type="email"]:focus ~ .form__focus-line {
+		transform: scaleX(1);
+	}
+
+	input[type="text"]:focus + label,
+	input[type="email"]:focus + label {
+		transform: translateY(-3.2rem);
+		font-size: 1.2rem;
+		padding: 0 7px;
+	}
+
+	input[type="text"]:not(:placeholder-shown) + label,
+	input[type="email"]:not(:placeholder-shown) + label {
+		transform: translateY(-3.2rem);
+		font-size: 1.2rem;
+		padding: 0 7px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder {
+		opacity: 0;
+		font-weight: normal;
+		color: $black;
+	}
+
+	input[type="text"]:focus::placeholder,
+	input[type="email"]:focus::placeholder {
+		opacity: 1;
+	}
+
+	input[type="text"].success,
+	input[type="email"].success {
+		border-bottom: 1px solid $success;
+		color: $success;
+	}
+
+	input[type="text"].fail,
+	input[type="email"].fail {
+		border-bottom: 1px solid $fail;
+		color: $fail;
+	}
+
+	.form-control--success {
+		&::after {
+			content: url(/assets/images/iconmonstr-checkbox-21.png);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 1.125rem;
+		}
+	}
+
+	.form-control--fail {
+		&::after {
+			content: "!";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 1.125rem;
+			color: $fail;
+		}
+	}
+
+	input[type="text"].success + label,
+	input[type="email"].success + label {
+		color: $success;
+	}
+
+	input[type="text"].fail + label,
+	input[type="email"].fail + label {
+		color: $fail;
+	}
+
+	label {
+		font-size: 1.6rem;
+		position: absolute;
+		left: 1.5rem;
+		top: 50%;
+		transform: translateY(-55%);
+		transition: all 0.1s ease-out;
+		pointer-events: none;
+		color: $clr-grey;
+	}
+
+	input[type="submit"] {
+		background-color: transparent;
+		height: 5rem;
+		border: 1px solid $clr-beige;
+		color: $clr-beige;
+		font-weight: 400;
+		font-size: 1.6rem;
+		font-family: inherit;
+		cursor: pointer;
+		width: 100%;
+		text-transform: uppercase;
+		transition: all 0.3s ease-out;
+
+		&:hover {
+			background-color: $clr-beige;
+			color: $black;
+		}
+	}
+
+	textarea {
+		background: rgba($black, 0.15);
+		border: 0;
+		font-size: 1.6em;
+		font-weight: 400;
+		width: 100%;
+		padding: 1.5rem;
+		outline: none;
+		color: $clr-grey-light;
+		font-family: "Montserrat", serif;
+	}
+
+	textarea ~ label {
+		top: 1.5rem;
+		transform: translateY(0%);
+	}
+
+	textarea:focus ~ .form__focus-line {
+		transform: scaleX(1);
+	}
+
+	textarea:not(:placeholder-shown) + label {
+		transform: translateY(-2.25rem);
+		font-size: 1.2rem;
+		padding: 0 7px;
+	}
+
+	textarea::placeholder {
+		opacity: 0;
+		font-weight: normal;
+		color: $black;
+	}
+
+	textarea:focus::placeholder {
+		opacity: 1;
+	}
+
+	textarea:focus + label {
+		transform: translateY(-2.25rem);
+		font-size: 1.2rem;
+		padding: 0 7px;
+	}
+
+	textarea.fail + label {
+		color: $fail;
+	}
+
+	textarea.fail {
+		border-bottom: 1px solid $fail;
+		color: $fail;
+	}
+
+	textarea.fail:focus ~ .form__focus-line {
+		border-bottom: 1px solid $fail;
+	}
+}
+
+.form__message {
+	p {
+		padding: 1rem 0;
+		font-size: 1.6rem;
+		color: $clr-beige;
+	}
+
+	&.success {
+		p {
+			color: $success;
+		}
+	}
+
+	&.fail {
+		p {
+			color: $fail;
+		}
+	}
+}

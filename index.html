@@ -76,21 +76,28 @@
 						<p data-cursor="is-large">
 							Jmenuji se Tomáš Macek, jsem freelance
 							<span class="underline">developer</span> z Chebu se zaměřením na tvorbu
-							<span class="underline">webových&nbsp;stránek</span> a redakční systém
-							<span class="underline">Wordpress</span>.
+							<span class="underline"
+								>webových<span class="no-break">&nbsp;</span
+								><span class="space"> </span>stránek</span
+							>
+							a redakční systém <span class="underline">Wordpress</span>.
 						</p>
-						<p class="hero__link">
-							<a href="#">Podívat se na práce </a>
-						</p>
+						<!-- <p class="hero__link">
+							<a href="#">podívat se na práce </a>
+						</p> -->
 					</div>
 				</section>
 
 				<section id="portfolio" class="portfolio">
-					<h2 class="portfolio__header">Portfolio</h2>
+					<h2 class="portfolio__header">portfolio</h2>
 					<div class="portfolio__grid">
 						<div class="portfolio__item">
 							<div class="portfolio__image">
-								<img src="/assets/img/Mockup-realestate.jpg" alt="" />
+								<img
+									src="/assets/img/Mockup-realestate.jpg"
+									alt="obrázek nebo mockup webové stránky"
+									loading="lazy"
+								/>
 							</div>
 							<!-- <div class="portfolio__overlay">Koncept - web realitní kanceláře</div> -->
 							<div class="cover"></div>
@@ -108,6 +115,7 @@
 										href="https://zen-fermat-ff879e.netlify.app/"
 										target="_blank"
 										class="overview__link"
+										aria-label="Otevřít odkaz"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +136,11 @@
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio__image">
-								<img src="/assets/img/Mockup-sustr.jpg" alt="" />
+								<img
+									src="/assets/img/Mockup-sustr.jpg"
+									alt="obrázek nebo mockup webové stránky"
+									loading="lazy"
+								/>
 							</div>
 							<div class="cover"></div>
 							<div class="overview">
@@ -145,6 +157,7 @@
 										href="https://www.su-str.cz/"
 										target="_blank"
 										class="overview__link"
+										aria-label="Otevřít odkaz"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +178,11 @@
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio__image">
-								<img src="/assets/img/Desktop - 3.jpg" alt="" />
+								<img
+									src="/assets/img/Desktop - 3.jpg"
+									alt="obrázek nebo mockup webové stránky"
+									loading="lazy"
+								/>
 							</div>
 							<!-- <div class="portfolio__overlay">Koncept - krypto app</div> -->
 							<div class="cover"></div>
@@ -182,6 +199,7 @@
 										href="https://musing-jang-474636.netlify.app/"
 										target="_blank"
 										class="overview__link"
+										aria-label="Otevřít odkaz"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +220,11 @@
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio__image">
-								<img src="/assets/img/Desktop - 4.jpg" alt="" />
+								<img
+									src="/assets/img/Desktop - 4.jpg"
+									alt="obrázek nebo mockup webové stránky"
+									loading="lazy"
+								/>
 							</div>
 							<!-- <div class="portfolio__overlay">Koncept - webové stránky pekařství</div> -->
 							<div class="cover"></div>
@@ -220,6 +242,7 @@
 										href="https://gifted-mcnulty-c4d140.netlify.app/"
 										target="_blank"
 										class="overview__link"
+										aria-label="Otevřít odkaz"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +263,11 @@
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio__image">
-								<img src="/assets/img/Mockup-2zs.jpg" alt="" />
+								<img
+									src="/assets/img/Mockup-2zs.jpg"
+									alt="obrázek nebo mockup webové stránky"
+									loading="lazy"
+								/>
 							</div>
 							<!-- <div class="portfolio__overlay">Webové stránky 2.ZŠ v Chebu</div> -->
 							<div class="cover"></div>
@@ -257,6 +284,7 @@
 										href="https://www.2zscheb.cz/"
 										target="_blank"
 										class="overview__link"
+										aria-label="Otevřít odkaz"
 									>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +305,7 @@
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio__overlay">
-								<a href="" class="text-serif enlarge">
+								<a href="#contact" class="text-serif enlarge link-to-contact">
 									Máte zájem o spolupráci?<br />
 									Neváhejte mě kontaktovat
 								</a>
@@ -296,31 +324,122 @@
 				</section>
 
 				<section id="contact" class="contact">
-					<!-- <div class="contact-box">
-						<svg
-							width="1339"
-							height="627"
-							viewBox="0 0 1339 627"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
+					<h2 class="contact__header">kontakt</h2>
+
+					<div class="contact-wrapper">
+						<form
+							class="form"
+							method="post"
+							action="/contact-form.php"
+							id="contact-form"
 						>
-							<rect
-								x="0.5"
-								y="0.5"
-								width="1338"
-								height="626"
-								stroke="#C7A780"
-								stroke-opacity="0.25"
-							/>
-						</svg>
-					</div> -->
+							<h3>formulář</h3>
 
-					<h2 class="contact__header">Kontakt</h2>
+							<div class="form-control">
+								<input
+									id="fname"
+									name="fname"
+									type="text"
+									class="form__name"
+									placeholder=" "
+									aria-labelledby=""
+								/>
+								<label for="fname" class="form__label">jméno *</label>
+								<span class="form__focus-line"></span>
+							</div>
+							<div class="form-control">
+								<input
+									id="email"
+									name="email"
+									type="email"
+									class="form__name"
+									placeholder=" "
+								/>
+								<label for="email" class="form__label">email *</label>
+								<span class="form__focus-line"></span>
+							</div>
+							<div class="form-control">
+								<textarea
+									id="message"
+									name="message"
+									rows="5"
+									class="form__textarea"
+									placeholder=" "
+								></textarea>
+								<label for="message" class="form__label">zpráva *</label>
+								<span class="form__focus-line"></span>
+							</div>
+							<!-- <div class="form-control form-control--success">
+								<input type="text" class="form__name success" placeholder=" " />
+								<label for="" class="form__label">Jméno *</label>
+							</div>
+							<div class="form-control form-control--fail">
+								<input type="text" class="form__name fail" placeholder=" " />
+								<label for="" class="form__label">Jméno *</label>
+							</div> -->
 
-					<div class="contact__card">
-						<p>email: <a href="mailto:macek.tom@gmail.com">macek.tom@gmail.com</a></p>
-						<p>phone: +420 732 301 224</p>
-						<div class="contact__icons"></div>
+							<div class="form__message">
+								<!-- <p>Děkuji! Zpráva byla odeslána.</p> -->
+							</div>
+
+							<div class="form-control form-control--submit">
+								<input type="submit" value="Odeslat" />
+							</div>
+						</form>
+
+						<div class="contact__card">
+							<h3>info</h3>
+							<p>
+								<a href="mailto:macek.tom@gmail.com">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="16"
+										height="16"
+										fill="currentColor"
+										class="bi bi-envelope"
+										viewBox="0 0 16 16"
+									>
+										<path
+											d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
+										/>
+									</svg>
+									macek.tom@gmail.com
+								</a>
+							</p>
+							<p>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-telephone"
+									viewBox="0 0 16 16"
+								>
+									<path
+										d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+									/></svg
+								>+420 732 301 224
+							</p>
+							<div class="contact__icons">
+								<a
+									href="https://www.linkedin.com/in/tomas-macek-0868aa33/"
+									target="_blank"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="16"
+										height="16"
+										fill="currentColor"
+										class="bi bi-linkedin"
+										viewBox="0 0 16 16"
+									>
+										<path
+											d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+										/>
+									</svg>
+								</a>
+							</div>
+						</div>
 					</div>
 				</section>
 			</main>

@@ -17,6 +17,11 @@
 		left: 0rem;
 		z-index: -1;
 		transition: all 0.2s ease-out;
+
+		@media (max-width: 480px) {
+			content: none;
+			display: none;
+		}
 	}
 
 	&::before {
@@ -31,6 +36,11 @@
 		animation-duration: 1.5s;
 		animation-fill-mode: forwards;
 		animation-iteration-count: 1;
+
+		@media (max-width: 480px) {
+			content: none;
+			display: none;
+		}
 	}
 
 	&:nth-of-type(2)::before {
@@ -58,7 +68,8 @@
 .lines {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: -1;
 	overflow: hidden;
 	height: 100%;
@@ -80,5 +91,17 @@
 				transform: translateX(-20%) scale(0.7);
 			}
 		}
+	}
+}
+
+.no-break {
+	@media (max-width: 480px) {
+		display: none;
+	}
+}
+
+.space {
+	@media (min-width: 481px) {
+		display: none;
 	}
 }

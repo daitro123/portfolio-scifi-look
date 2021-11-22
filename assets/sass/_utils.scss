@@ -78,14 +78,14 @@
 		& circle {
 			stroke-dasharray: 6000;
 			stroke-dashoffset: 6000;
-			animation: dash 3s linear forwards;
+			animation: dash 2s linear forwards;
 		}
 
 		// triangle
 		& path {
 			stroke-dasharray: 5000;
 			stroke-dashoffset: 5000;
-			animation: dash 3s ease 2s forwards;
+			animation: dash 2s ease 1s forwards;
 
 			@media (max-width: $small) {
 				transform: translateX(-20%) scale(0.7);
@@ -104,4 +104,8 @@
 	@media (min-width: 481px) {
 		display: none;
 	}
+}
+
+.text-background {
+	background-color: $clr-beige;
 }

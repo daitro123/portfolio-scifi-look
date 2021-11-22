@@ -44,7 +44,8 @@ ScrollTrigger.matchMedia({
 			scrollTrigger: {
 				trigger: ".contact__header",
 				ease: "Power2.out",
-				start: "center bottom", // the default values
+				start: "top-=500 bottom", // the default values
+				end: "bottom center",
 				scrub: 1.5,
 			},
 		});
